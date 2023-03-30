@@ -58,15 +58,42 @@ import Chart from 'chart.js/auto'
           ]
         }
       }
+      const polarcfg = {
+        type: 'polarArea',
+        data: {
+          labels: data.map(row => row.year),
+          datasets: [
+            {
+              label: 'Acquisitions by year',
+              data: data.map(row => row.count)
+            }
+          ]
+        }
+      }
+      const radarcfg = {
+        type: 'radar',
+        data: {
+          labels: data.map(row => row.year),
+          datasets: [
+            {
+              label: 'Acquisitions by year',
+              data: data.map(row => row.count)
+            }
+          ]
+        }
+      }
   chartGen('bar', barcfg);
   chartGen('line', linecfg);
   chartGen('doughnut', doughnutcfg)
   chartGen('bubble', bubblecfg);
   chartGen('polar', polarcfg);
+  chartGen('radar', radarcfg);
   function chartGen(element, cfg){
     new Chart(
     document.getElementById(element),
     cfg
+  
+  
 )}
 })();
 //element: what element on the html side to change
