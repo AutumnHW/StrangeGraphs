@@ -7,3 +7,10 @@ header {
     font-size: xx-large;
     color: rgb(255,	145,	54)
 }
+p {
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div {
+    width: 1200px;
+}
