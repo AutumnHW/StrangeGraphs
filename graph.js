@@ -18,9 +18,13 @@ console.log(data.map(row => row.CycleTimesFilter));
 var defaultcfg = {
     type: 'bar',
     data: {
+    
       labels: teamNumbersFilter,
       datasets: [
         {
+          backgroundColor:['rgb(30,	39,	167)'],
+          borderColor:['rgb(255, 145, 54)'],
+          borderWidth: 5,
           label: 'Cycle Time',
           data: cycleTimesFilter,
         }
