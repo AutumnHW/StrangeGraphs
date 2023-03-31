@@ -46,6 +46,18 @@ import Chart from 'chart.js/auto'
           ]
         }
       }
+      const piecfg = {
+        type: 'doughnut',
+        data: {
+          labels: data.map(row => row.year),
+          datasets: [
+            {
+              label: 'Acquisitions by year',
+              data: data.map(row => row.count)
+            }
+          ]
+        }
+      }
       const bubblecfg = {
         type: 'bubble',
         data: {
@@ -85,6 +97,7 @@ import Chart from 'chart.js/auto'
   chartGen('bar', barcfg);
   chartGen('line', linecfg);
   chartGen('doughnut', doughnutcfg)
+  //chartGen('pie', piecfg)
   chartGen('bubble', bubblecfg);
   chartGen('polar', polarcfg);
   chartGen('radar', radarcfg);
