@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
-import config from './config.json';
+//import config from './config.json';
 import data from "./database/Matches.json"
-import { parse } from 'path-browserify';
+//import { parse } from 'path-browserify';
 var ids = data.map(row => row.ID);
 var teamNumbers = data.map(row => row.TeamNumber);
 var cycleTimes = data.map(row => row.CycleTime);
