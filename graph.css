@@ -1,3 +1,9 @@
-head {
+header {
+    min-height: 50;
+    min-width: 1920;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: rgb(30,	39,	167);
     font-size: xx-large;
+    color: rgb(255,	145,	54)
 }

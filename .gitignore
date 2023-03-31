@@ -3,3 +3,6 @@ node_modules
 .vscode
 .parcel-cache
 dist
+config.json
+ss.db
+database

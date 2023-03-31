@@ -5,10 +5,25 @@
     "build": "parcel build ./index.html"
   },
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "assert": "^2.0.0",
+    "buffer": "^5.7.1",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.6.2",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
   },
   "dependencies": {
     "chart.js": "^4.2.1",
-    "node-sql-parser": "^4.6.6"
+    "json": "^11.0.0",
+    "sql.js": "^1.8.0",
+    "thebluealliance": "^1.2.3"
   }
 }
