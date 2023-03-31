@@ -15,3 +15,10 @@ p {
 div {
     width: 1200px;
 }
+button {
+    border-color:rgb(255,	145,	54);
+    background-color: rgb(255,	145,	54);
+    
+    color: rgb(30,	39,	167);
+    border-radius: 10px;
+}
