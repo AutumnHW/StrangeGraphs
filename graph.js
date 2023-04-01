@@ -1,7 +1,8 @@
 import Chart from 'chart.js/auto';
-//import config from './config.json';
+import config from './config.json';
 import data from "./database/Matches.json"
 //import { parse } from 'path-browserify';
+import BlueAlliance from 'bluealliance';
 var ids = data.map(row => row.ID);
 var teamNumbers = data.map(row => row.TeamNumber);
 var cycleTimes = data.map(row => row.CycleTime);
@@ -11,7 +12,9 @@ var teamNumbersFilter = [];
 var cycleTimesFilter = [];
 var eventNamesFilter = [];
 var currentEvent = "Initial";
-(async function() {
+const tba = new BlueAlliance("syIPgeJs5CxqiDXKovxMe6w0jvhDGeQot1gq0SpfydHjOQoDE0njl3zMFoGFllC6");
+
+//(async function() {
 const searchLabels = ["Go on then!", "I command thee", "Proceed to the route", "Robot go brr"];
 console.log(data.map(row => row.teamNumbersFilter));
 console.log(data.map(row => row.CycleTimesFilter));
@@ -31,10 +34,14 @@ var defaultcfg = {
       ]
     }
   }
+
 parseEventData(currentEvent);
 setupPage(defaultcfg);
-//(async function() {
-//})();
+var teamTest = async function() {
+    var team = await tba.getTeam(1533);
+    console.log(team.nickname)
+}
+//teamTest()
 function parseEventData(eventname){
     currentEvent = eventname;
     if (eventname === "Initial") {
@@ -75,4 +82,4 @@ function setupPage(cfg){
     document.getElementById("graphLabel").innerHTML = "Now showing data for " + currentEvent
     document.getElementById("searchButton").innerHTML = searchLabels[Math.floor(Math.random() * searchLabels.length)]
 }
-})();
+//})();
